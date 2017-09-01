@@ -1,6 +1,6 @@
 # PaloAltoAzure
 
-[<img src="http://azuredeploy.net/deploybutton.png"/>](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FPavel-Petkov%2FPaloAltoAzure%2Fmaster%2FAzure-Multi-IP%2FazureDeploy.json)
+[<img src="http://azuredeploy.net/deploybutton.png"/>](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FPavel-Petkov%2FPaloAltoAzure%2Fmaster%2FazureDeploy.json)
 
 This template deploys a firewall sandwich environment that includes:
 
