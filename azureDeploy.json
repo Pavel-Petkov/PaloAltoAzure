@@ -361,7 +361,7 @@
                     {
                         "name": "FW2-Untrust",
                       "properties": {
-                        "privateIPAddress": "172.22.0.21  ",
+                        "privateIPAddress": "172.22.0.21",
                         "privateIPAllocationMethod": "Static",
                         "publicIPAddress": {
                           "id": "[resourceId('Microsoft.Network/publicIPAddresses', 'EDGEFW2-Egress-pip')]"
