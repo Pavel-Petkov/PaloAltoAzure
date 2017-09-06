@@ -185,7 +185,7 @@
                         	"privateIPAddress": "172.22.0.52",
                             "privateIPAllocationMethod": "Static",
                             "subnet": {
-                                "id": "[concat('transit-vnet', '/subnets/lb-int-subnet')]"
+                                "id": "[concat('/subscriptions/ba79533f-727f-48b2-952d-31081535fb34/resourceGroups/transit-prod-rg/providers/Microsoft.Network/virtualNetworks/transit-vnet', '/subnets/lb-int-subnet')]"
                             }
                         }
                     }
@@ -276,7 +276,7 @@
                                 "id": "[resourceId('Microsoft.Network/publicIPAddresses', 'EDGEFW1-mgmt-pip')]"
                             },
                             "subnet": {
-                                "id": "[concat( 'transit-vnet', '/subnets/int-admin-transit-subnet')]"
+                                "id": "[concat( '/subscriptions/ba79533f-727f-48b2-952d-31081535fb34/resourceGroups/transit-prod-rg/providers/Microsoft.Network/virtualNetworks/transit-vnet', '/subnets/int-admin-transit-subnet')]"
                             },
                             "privateIpAddress": "172.22.1.10"
                         }
@@ -302,7 +302,7 @@
                           "id": "[resourceId('Microsoft.Network/publicIPAddresses', 'EDGEFW2-mgmt-pip')]"
                         },
                         "subnet": {
-                          "id": "[concat(resourceId('Microsoft.Network/virtualNetworks', 'transit-vnet'), '/subnets/int-admin-transit-subnet')]"
+                          "id": "[concat( '/subscriptions/ba79533f-727f-48b2-952d-31081535fb34/resourceGroups/transit-prod-rg/providers/Microsoft.Network/virtualNetworks/transit-vnet', '/subnets/int-admin-transit-subnet')]"
                         },
                         "privateIpAddress": "172.22.1.11"
                       }
@@ -332,7 +332,7 @@
                       },
                       "primary": true,
                       "subnet": {
-                        "id": "[concat('transit-vnet', '/subnets/fw-edge-untrust-subnet')]"
+                        "id": "[concat('/subscriptions/ba79533f-727f-48b2-952d-31081535fb34/resourceGroups/transit-prod-rg/providers/Microsoft.Network/virtualNetworks/transit-vnet', '/subnets/fw-edge-untrust-subnet')]"
                       },
                       "loadBalancerBackendAddressPools": [
                         {
@@ -365,7 +365,7 @@
                           "id": "[resourceId('Microsoft.Network/publicIPAddresses', 'IP-FW2-Egress')]"
                         },
                         "subnet": {
-                          "id": "[concat( 'transit-vnet', '/subnets/fw-edge-untrust-subnet')]"
+                          "id": "[concat( '/subscriptions/ba79533f-727f-48b2-952d-31081535fb34/resourceGroups/transit-prod-rg/providers/Microsoft.Network/virtualNetworks/transit-vnet', '/subnets/fw-edge-untrust-subnet')]"
                         },
                         "loadBalancerBackendAddressPools": [
                           {
@@ -395,7 +395,7 @@
                       "properties": {
                         "privateIPAllocationMethod": "Static",
                         "subnet": {
-                          "id": "[concat('transit-vnet', '/subnets/fw-edge-trust-subnet')]"
+                          "id": "[concat('/subscriptions/ba79533f-727f-48b2-952d-31081535fb34/resourceGroups/transit-prod-rg/providers/Microsoft.Network/virtualNetworks/transit-vnet', '/subnets/fw-edge-trust-subnet')]"
                         },
                         "privateIpAddress": "172.22.0.36",
                         "loadBalancerBackendAddressPools": [
@@ -425,7 +425,7 @@
                       "properties": {
                         "privateIPAllocationMethod": "Static",
                         "subnet": {
-                          "id": "[concat( 'transit-vnet', '/subnets/fw-edge-trust-subnet')]"
+                          "id": "[concat( '/subscriptions/ba79533f-727f-48b2-952d-31081535fb34/resourceGroups/transit-prod-rg/providers/Microsoft.Network/virtualNetworks/transit-vnet', '/subnets/fw-edge-trust-subnet')]"
                         },
                         "privateIpAddress": "172.22.0.37",
                         "loadBalancerBackendAddressPools": [
