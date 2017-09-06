@@ -323,17 +323,19 @@
                 "enableIPForwarding": true,
                 "ipConfigurations": [
                 	{
-						"name": "FW1-Untrust",
+						        "name": "FW1-Untrust",
                     "properties": {
-                      "privateIpAddress": "172.22.0.20",
                       "privateIPAllocationMethod": "Static",
+                      "subnet": {
+                        "id": "[concat('/subscriptions/ba79533f-727f-48b2-952d-31081535fb34/resourceGroups/transit-prod-rg/providers/Microsoft.Network/virtualNetworks/transit-vnet', '/subnets/fw-edge-untrust-subnet')]"
+                      },
+                      "privateIpAddress": "172.22.0.20",
+
                       "publicIPAddress": {
                         "id": "[resourceId('Microsoft.Network/publicIPAddresses', 'IP-FW1-Egress')]"
                       },
                       "primary": true,
-                      "subnet": {
-                        "id": "[concat('/subscriptions/ba79533f-727f-48b2-952d-31081535fb34/resourceGroups/transit-prod-rg/providers/Microsoft.Network/virtualNetworks/transit-vnet', '/subnets/fw-edge-untrust-subnet')]"
-                      },
+
                       "loadBalancerBackendAddressPools": [
                         {
                           "id": "[concat(resourceId('Microsoft.Network/loadBalancers', 'LB-Public'), '/backendAddressPools/AS-EDGEFW')]"
