@@ -169,7 +169,6 @@
             "resources": [],
             "dependsOn": [
                 "[resourceId('Microsoft.Network/publicIPAddresses', 'LB-Public-pip')]",
-                "[resourceId('Microsoft.Network/virtualNetworks', 'transit-vnet')]",
                 "[resourceId('Microsoft.Compute/availabilitySets', 'AS-EDGEFW')]"
             ]
         },
@@ -255,7 +254,7 @@
             },
             "resources": [],
             "dependsOn": [
-                "[resourceId('Microsoft.Network/virtualNetworks', 'transit-vnet')]",
+                
                 "[resourceId('Microsoft.Compute/availabilitySets', 'AS-EDGEFW')]"
             ]
         },
@@ -319,7 +318,7 @@
             "name": "EDGEFW1-Untrust-int",
             "location": "[resourceGroup().location]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/virtualNetworks', 'transit-vnet')]",
+                
                 "[resourceId('Microsoft.Network/loadBalancers', 'LB-Public')]"
             ],
             "properties": {
@@ -353,7 +352,7 @@
             "name": "EDGEFW2-Untrust-int",
             "location": "[resourceGroup().location]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/virtualNetworks', 'transit-vnet')]",
+                
                 "[resourceId('Microsoft.Network/loadBalancers', 'LB-Public')]"
             ],
             "properties": {
@@ -386,7 +385,7 @@
             "name": "EDGEFW1-Trust-int",
             "location": "[resourceGroup().location]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/virtualNetworks', 'transit-vnet')]",
+                
                 "[resourceId('Microsoft.Network/loadBalancers', 'LB-Egress')]"
 
             ],
@@ -417,7 +416,7 @@
             "name": "EDGEFW2-Trust-int",
             "location": "[resourceGroup().location]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/virtualNetworks', 'transit-vnet')]",
+                
                 "[resourceId('Microsoft.Network/loadBalancers', 'LB-Egress')]"
             ],
             "properties": {
@@ -533,7 +532,7 @@
                 }
             },
             "dependsOn": [
-                "[resourceId('Microsoft.Network/virtualNetworks', 'transit-vnet')]",
+                
                 "[resourceId('Microsoft.Network/publicIPAddresses', 'EDGEFW1-mgmt-pip')]",
                 "[resourceId('Microsoft.Network/networkInterfaces', 'EDGEFW1-mgmt-int')]",
                 "[resourceId('Microsoft.Network/networkInterfaces', 'EDGEFW1-Untrust-int')]",
@@ -604,7 +603,7 @@
                 }
             },
             "dependsOn": [
-                "[resourceId('Microsoft.Network/virtualNetworks', 'transit-vnet')]",
+                
                 "[resourceId('Microsoft.Network/publicIPAddresses', 'EDGEFW2-mgmt-pip')]",
                 "[resourceId('Microsoft.Network/networkInterfaces', 'EDGEFW2-mgmt-int')]",
                 "[resourceId('Microsoft.Network/networkInterfaces', 'EDGEFW2-Untrust-int')]",
