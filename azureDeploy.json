@@ -332,7 +332,7 @@
                       "privateIpAddress": "172.22.0.20",
 
                       "publicIPAddress": {
-                        "id": "[resourceId('Microsoft.Network/publicIPAddresses', 'IP-FW1-Egress')]"
+                        "id": "[resourceId('Microsoft.Network/publicIPAddresses', 'EDGEFW1-Egress-pip')]"
                       },
                       "primary": true,
 
@@ -364,7 +364,7 @@
                         "privateIPAddress": "172.22.0.21  ",
                         "privateIPAllocationMethod": "Static",
                         "publicIPAddress": {
-                          "id": "[resourceId('Microsoft.Network/publicIPAddresses', 'IP-FW2-Egress')]"
+                          "id": "[resourceId('Microsoft.Network/publicIPAddresses', 'EDGEFW2-Egress-pip')]"
                         },
                         "subnet": {
                           "id": "[concat( '/subscriptions/ba79533f-727f-48b2-952d-31081535fb34/resourceGroups/transit-prod-rg/providers/Microsoft.Network/virtualNetworks/transit-vnet', '/subnets/fw-edge-untrust-subnet')]"
